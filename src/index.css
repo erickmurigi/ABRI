@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    /* ABRI REALTORS Brand Colors */
+    --background: 150 11% 96%;
+    --foreground: 198 20% 23%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 198 20% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 198 20% 23%;
+
+    /* Primary Green #00A86B */
+    --primary: 156 100% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Deep Blue-Gray #2F3E46 */
+    --secondary: 198 20% 23%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 150 11% 92%;
+    --muted-foreground: 198 15% 45%;
+
+    --accent: 156 80% 95%;
+    --accent-foreground: 156 100% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 11% 88%;
+    --input: 150 11% 88%;
+    --ring: 156 100% 33%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(198 20% 23% / 0.95) 0%, hsl(198 25% 18% / 0.9) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(156 100% 33%) 0%, hsl(156 90% 28%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(150 11% 98%) 100%);
+    
+    --shadow-sm: 0 1px 2px 0 hsl(198 20% 23% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(198 20% 23% / 0.1), 0 2px 4px -2px hsl(198 20% 23% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(198 20% 23% / 0.1), 0 4px 6px -4px hsl(198 20% 23% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(198 20% 23% / 0.1), 0 8px 10px -6px hsl(198 20% 23% / 0.1);
+    --shadow-card: 0 4px 20px -2px hsl(198 20% 23% / 0.08);
+    --shadow-card-hover: 0 12px 40px -8px hsl(156 100% 33% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 198 25% 12%;
+    --foreground: 150 11% 96%;
+
+    --card: 198 22% 16%;
+    --card-foreground: 150 11% 96%;
+
+    --popover: 198 22% 16%;
+    --popover-foreground: 150 11% 96%;
+
+    --primary: 156 100% 40%;
+    --primary-foreground: 198 20% 10%;
+
+    --secondary: 198 18% 25%;
+    --secondary-foreground: 150 11% 96%;
+
+    --muted: 198 20% 20%;
+    --muted-foreground: 150 11% 70%;
+
+    --accent: 156 50% 20%;
+    --accent-foreground: 156 100% 60%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 198 20% 22%;
+    --input: 198 20% 22%;
+    --ring: 156 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-secondary;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-600;
+  }
+
+  .card-premium {
+    @apply bg-card rounded-2xl p-6 md:p-8 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-premium:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply -translate-y-1;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-primary-foreground transition-all duration-300;
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 14px 0 hsl(156 100% 33% / 0.35);
+  }
+
+  .btn-primary:hover {
+    @apply scale-105;
+    box-shadow: 0 6px 20px 0 hsl(156 100% 33% / 0.45);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border-2 border-secondary text-secondary transition-all duration-300;
+    @apply hover:bg-secondary hover:text-secondary-foreground;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold border-2 border-white/30 text-white transition-all duration-300;
+    @apply hover:bg-white/10 hover:border-white/50;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
+  }
+
+  .icon-box {
+    @apply w-14 h-14 rounded-xl flex items-center justify-center bg-accent text-primary;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
