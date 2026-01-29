@@ -16,7 +16,7 @@ const Footer = () => {
               <span className="font-bold text-xl text-white">ABRI REALTORS</span>
             </div>
             <p className="text-white/70 mb-6 max-w-md">
-              Professional property management services for Nairobi landlords. 
+              Professional property management services for landlords and Property Owners. 
               Stress-free, transparent, and system-driven solutions that maximize your rental income.
             </p>
             <div className="flex gap-4">

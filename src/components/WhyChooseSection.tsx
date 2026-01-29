@@ -46,7 +46,7 @@ const WhyChooseSection = () => {
               Why Choose Us
             </span>
             <h2 className="section-title">
-              Why Nairobi Landlords Trust ABRI REALTORS
+              Why do Landlords Trust ABRI REALTORS
             </h2>
             <p className="section-subtitle mt-4">
               We combine local expertise with modern technology to deliver 
