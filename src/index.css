@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* stylelint-disable at-rule-no-unknown */
+/* stylelint-disable at-rule-no-unknown, tailwindcss/no-custom-classname */
 
 
 @layer base {
