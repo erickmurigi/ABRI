@@ -37,27 +37,27 @@ const HeroSection = () => {
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-up animation-delay-300">
-            
-            <Button 
-              className="btn-outline-white text-lg px-8 py-6 gap-2"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            > 
-              <Play className="w-5 h-5" />
-              View Our Services
-            </Button>
-             {/* CTA Button */}
-                      <div className="hidden lg:block">
-                                    <ConsultationForm
-                          trigger={
-                            <Button className=" btn-outline-white text-lg px-8 py-6 btn-primary gap-2">
-                              <Phone className="w-5 h-5" />
-                              Free Consultation
-                            </Button>
-                          }
-                        />  
-                      </div>
-          </div>
+<div className="flex flex-col sm:flex-row gap-4 animate-fade-up animation-delay-300">
+  
+  <Button 
+    className="btn-outline-white text-lg px-8 py-6 gap-2"
+    onClick={() =>
+      document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })
+    }
+  > 
+    <Play className="w-5 h-5" />
+    View Our Services
+  </Button>
+
+  <ConsultationForm
+    trigger={
+      <Button className="btn-primary text-lg px-8 py-6 gap-2">
+        <Phone className="w-5 h-5" />
+        Free Consultation
+      </Button>
+    }
+  />
+</div>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-white/10 animate-fade-up animation-delay-400">

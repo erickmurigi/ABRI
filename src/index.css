@@ -131,6 +131,7 @@
   .card-premium {
     @apply bg-card rounded-2xl p-6 md:p-8 transition-all duration-300;
     box-shadow: var(--shadow-card);
+    scroll-behavior:smooth;
   }
 
   .card-premium:hover {
