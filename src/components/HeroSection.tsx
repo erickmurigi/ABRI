@@ -1,6 +1,7 @@
-import { ArrowRight, Play } from 'lucide-react';
+import { ArrowRight, Play, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-building.jpg';
+import ConsultationForm from './ConsultationForm';
 
 const HeroSection = () => {
   return (
@@ -45,6 +46,17 @@ const HeroSection = () => {
               <Play className="w-5 h-5" />
               View Our Services
             </Button>
+             {/* CTA Button */}
+                      <div className="hidden lg:block">
+                                    <ConsultationForm
+                          trigger={
+                            <Button className=" btn-outline-white text-lg px-8 py-6 btn-primary gap-2">
+                              <Phone className="w-5 h-5" />
+                              Free Consultation
+                            </Button>
+                          }
+                        />  
+                      </div>
           </div>
 
           {/* Stats */}
