@@ -43,7 +43,7 @@ const Header = () => {
   <img
     src={AbriLogo}
     alt="ABRI Realtors Logo"
-    className="h-20 w-40 md:h-8 lg:h-64 object-contain"
+    className="h-10 w-40 md:h-20 lg:h-40 object-contain"
   />
 
   {/* Brand name */}

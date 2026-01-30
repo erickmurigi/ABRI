@@ -37,10 +37,7 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-up animation-delay-300">
-            <Button className="btn-primary text-lg px-8 py-6 gap-2">
-              Book a Free Consultation
-              <ArrowRight className="w-5 h-5" />
-            </Button>
+            
             <Button 
               className="btn-outline-white text-lg px-8 py-6 gap-2"
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}

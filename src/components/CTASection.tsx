@@ -42,7 +42,7 @@ const CTASection = () => {
 
           {/* Trust Badges */}
           <div className="mt-12 pt-8 border-t border-white/20">
-            <p className="text-white/60 text-sm mb-4">Trusted by property owners across Nairobi</p>
+            <p className="text-white/60 text-sm mb-4">Trusted by property owners across</p>
             <div className="flex items-center justify-center gap-8 flex-wrap">
               <div className="text-center">
                 <p className="text-2xl font-bold text-white">500+</p>

@@ -30,8 +30,8 @@ const reasons = [
   },
   {
     icon: MapPin,
-    title: "Nairobi-Based Support",
-    description: "Local team that understands the Nairobi property market."
+    title: "24/7 Support",
+    description: "Local team that understands property market well will always be available."
   }
 ];
 
